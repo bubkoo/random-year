@@ -1,8 +1,8 @@
 var expect = require('chai').expect;
 
-describe('random-firstName: ', function () {
+describe('random-year: ', function () {
 
-  var randomAmPm = require('../../');
+  var randomYear = require('../../');
 
   it('common', function () {
 
@@ -12,9 +12,9 @@ describe('random-firstName: ', function () {
 
     while (count--) {
 
-      expect(randomAmPm()).to.be.within(year - 100, year);
-      expect(randomAmPm(2000)).to.be.within(1900, 2000);
-      expect(randomAmPm(1900, 2100)).to.be.within(1900, 2100);
+      expect(randomYear()).to.be.within(year - 100, year);
+      expect(randomYear(2000)).to.be.within(1900, 2000);
+      expect(randomYear(1900, 2100)).to.be.within(1900, 2100);
     }
   });
 });
