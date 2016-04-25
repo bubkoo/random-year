@@ -1,6 +1,6 @@
 {
   "name": "random-year",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate a random year.",
   "main": "index.js",
   "scripts": {

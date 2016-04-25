@@ -59,7 +59,7 @@ randomYear({ min: 1900, max: 2100 });
 - [random-datetime](https://github.com/mock-end/random-datetime) - Generate a random date. 
 - [random-ampm](https://github.com/mock-end/random-ampm) - Return am or pm. Very simple.
 - [random-timestamps](https://github.com/mock-end/random-timestamps) - Generate a timestamp. 
-- [random-hammertime](https://github.com/mock-end/random-datetime) - Generate a random hammertime. 
+- [random-hammertime](https://github.com/mock-end/random-hammertime) - Generate a random hammertime. 
 
 
 ## Contributing
