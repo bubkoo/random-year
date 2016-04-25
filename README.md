@@ -2,7 +2,6 @@
 
 > Generate a random year.
 
-
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-year/blob/master/LICENSE)
 
 [![build:?](https://img.shields.io/travis/mock-end/random-year/master.svg?style=flat-square)](https://travis-ci.org/mock-end/random-year)
@@ -21,9 +20,11 @@ $ npm install --save random-year
 var randomYear = require('random-year');
 
 // API
-// - randomYear();
-// - randomYear(max);
-// - randomYear(min, max);
+// - randomYear([options]);
+
+// options
+// - min
+// - max
 ```
 
 By default, `max` is the current year and `min` is 100 years smaller than `max`.
@@ -36,10 +37,13 @@ randomYear();
 Optionally specify min, max, or both to limit the range.
 
 ```js
-randomAmPm(2000); // min is 1900
+randomYear({ max: 2000 }); // min will be 1900
 // => 1967
 
-randomAmPm(1900, 2100);
+randomYear({ min: 1900 }); // max will be 2000
+// => 1989
+
+randomYear({ min: 1900, max: 2100 });
 // => 2003
 ```
 

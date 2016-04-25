@@ -2,18 +2,24 @@
 
 var randomNatural = require('random-natural');
 
-module.exports = function (min, max) {
+module.exports = function (options) {
 
-  var length = arguments.length;
-  var now    = new Date();
+  if (options && (options.min || options.max)) {
 
-  if (length === 0) {
-    max = now.getFullYear();
-    min = max - 100;
-  } else if (length === 1) {
-    max = min;
-    min = max - 100;
+    if (!options.min) {
+      options.min = options.max - 100;
+    } else if (!options.max) {
+      options.max = options.min + 100;
+    }
+
+    return randomNatural(options);
   }
 
-  return randomNatural(min, max);
+  var year = (new Date()).getFullYear();
+
+  return randomNatural({
+    max: year,
+    min: year - 100,
+    inspected: true
+  });
 };

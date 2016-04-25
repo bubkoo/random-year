@@ -13,8 +13,9 @@ describe('random-year: ', function () {
     while (count--) {
 
       expect(randomYear()).to.be.within(year - 100, year);
-      expect(randomYear(2000)).to.be.within(1900, 2000);
-      expect(randomYear(1900, 2100)).to.be.within(1900, 2100);
+      expect(randomYear({ max: 2000 })).to.be.within(1900, 2000);
+      expect(randomYear({ min: 1900 })).to.be.within(1900, 2000);
+      expect(randomYear({ min: 1900, max: 2100 })).to.be.within(1900, 2100);
     }
   });
 });
